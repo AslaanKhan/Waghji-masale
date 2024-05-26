@@ -1,50 +1,33 @@
-import React, { useState } from 'react';
-import { chickenProductList, muttonProductList } from '../../constants';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import Pagination from '../Pagination';
-import { useMatch } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react';
+import ProductContext from '../../GlobalProvider/Context';
 const Products = () => {
-    const chicken = useMatch('/chicken');
-    const mutton = useMatch('/mutton');
-
-    const ProductList = chicken ? chickenProductList : mutton ? muttonProductList : '';
-
-    const productsPerPage = 6;
-    const totalPages = Math.ceil(ProductList.length / productsPerPage);
-
-    const [currentPage, setCurrentPage] = useState(1);
-
-    const getCurrentProducts = () => {
-        const startIndex = (currentPage - 1) * productsPerPage;
-        const endIndex = startIndex + productsPerPage;
-        return ProductList.slice(startIndex, endIndex);
-    };
-
-    const handlePageChange = (page) => {
-        setCurrentPage(page);
-    };
+    const { products } = useContext(ProductContext)
 
     useGSAP(() => {
-        gsap.to("#products", { opacity: 1, duration: 1, delay: 0.1, ease: 'power4.inOut' })
-        gsap.to("#productCard", { opacity: 1, duration: 1, stagger: 0.2, delay: 0.5, ease: 'power4.inOut' })
+        gsap.from('#products', { opacity: 1, duration: 1, ease: 'power4.inOut' })
+        gsap.to('#productCard', { opacity: 1, duration: 1,stagger: 0.1, delay: 0.1, ease: 'power4.inOut' })
     }, [])
 
+    useEffect(() => {
+        gsap.from('#products', { opacity: 1, duration: 1, ease: 'power4.inOut' })
+        gsap.to('#productCard', { opacity: 1, duration: 1,stagger: 0.1, delay: 0.1, ease: 'power4.inOut' })
+    }, [products])
+
     return (
-        <section id='products' className='opacity-0 nav-height bg-black relative w-[90%] h-full mx-auto my-auto'>
-            <h1 className="md:text-3xl text-2xl font-bold text-center text-white my-8">Delicious Chicken Spice Mixes to Elevate Your Culinary Creations</h1>
+        <section id='products' className='nav-height bg-black relative w-[90%] h-full mx-auto my-auto'>
+            <h1 className="md:text-3xl text-2xl font-bold text-center text-white my-8"> Search Our Delicious Spice Mixes</h1>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6'>
-                {getCurrentProducts().map((product, i) => (
-                    <ProductCard key={i} product={product} />
-                ))}
+                {products.length > 0 ? products.map((product, i) => <ProductCard key={i} product={product} />) : 'No products found'}
             </div>
-            <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
         </section>
     );
 };
 
 const ProductCard = ({ product }) => {
     const [selectedSize, setSelectedSize] = useState(product.size[0]);
+    const handleSizeChange = (size) => setSelectedSize(size);
 
     return (
         <div id='productCard' className='opacity-0 bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300'>
@@ -53,12 +36,25 @@ const ProductCard = ({ product }) => {
                     <img src={product.productImg} className='w-full h-full object-cover rounded-full' alt={product.label} />
                 </div>
                 <div className='text-center'>
-                    <p className='text-yellow-500 text-lg font-extrabold mb-2'>Rs. {product.price[selectedSize]}</p>
-                    {product.size.map((size, index) => (
-                        <span className={`${selectedSize === size ? 'text-yellow-500' : 'text-white'} cursor-pointer`} key={index} onClick={() => setSelectedSize(size)}>
-                            {size} {index < product.size.length - 1 ? ' / ' : ''}
-                        </span>
-                    ))}
+                    <p className='text-yellow-500 text-lg font-extrabold mb-2'>
+                        Rs. {product.price[selectedSize]}
+                    </p>
+                    <div className='flex flex-wrap justify-center'>
+                        {product.size.map((size, index) => (
+                            <span
+                                key={index}
+                                className={`text-white cursor-pointer ${
+                                    selectedSize === size
+                                        ? 'text-yellow-500'
+                                        : ''
+                                }`}
+                                onClick={() => handleSizeChange(size)}
+                            >
+                                {size}
+                                {index < product.size.length - 1 && ' / '}
+                            </span>
+                        ))}
+                    </div>
                     <h3 className='font-semibold text-white my-1'>{product.label}</h3>
                     <p className='text-white line-clamp-3 text-sm'>{product.description}</p>
                 </div>

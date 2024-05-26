@@ -211,3 +211,5 @@ import {
       description: 'With the support of our nimble crew of employees Waghji is one of the named masala manufacturer in Indore, we are dedicatedly betrothed in the business of bringing forth a vast compilation of Chicken Chilly Mix. Broadly used in the preparation of many chicken dishes especially chilly chicken, these are hygienically processed and prepared at hi-tech processing unit. Furthermore, the final consignment is well checked on a number of grounds prior finally delivering it in order to maintain its superior quality and flawlessness.'
     },
   ];
+
+  export const combinedProductList = [...chickenProductList, ...muttonProductList];
