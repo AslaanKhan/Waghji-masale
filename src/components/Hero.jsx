@@ -27,8 +27,8 @@ const Hero = () => {
     }
   )
   return (
-    <section className='w-full nav-height bg-black relative'>
-      <div className='h-5/6 w-full flex-center flex-col'>
+    <section className='w-full md:nav-height h-[calc(100vh-20px)] bg-black relative'>
+      <div className='h-[90%] w-full flex-center flex-col'>
         <div id='hero-title' className='opacity-0 flex flex-col md:w-10/12 w-11/12 items-center justify-center text-center'>
           <img src="/assets/images/waghji-logo-Copy.png" className='w-32 md:w-40 lg:w-48' alt="Waghji Logo" />
           <div className='mx-auto max-w-[80%] mt-4'>
