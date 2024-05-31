@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { chickenProductList } from '../../constants';
+import { chickenProductList, otherProductsList } from '../../constants';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import Pagination from '../Pagination';
 import { CiBoxList, CiGrid41 } from 'react-icons/ci';
 
 const OtherPage = () => {
-    const ProductList = chickenProductList;
+    const ProductList = otherProductsList;
     const [productView, setProductView] = useState('grid');
 
     const productsPerPage = 6;
@@ -40,17 +40,17 @@ const OtherPage = () => {
                 </div>
             </div>
             <div className={`${productView === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6' : 'grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6'}`}>
-                {getCurrentProducts().map((product, i) => (
+                {ProductList.map((product, i) => (
                     <ProductCard key={i} product={product} productView={productView} />
                 ))}
             </div>
-            <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
+            {/* <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} /> */}
         </section>
     );
 };
 
 const ProductCard = ({ product, productView }) => {
-    const [selectedSize, setSelectedSize] = useState(product.size[0]);
+    const [selectedSize, setSelectedSize] = useState(Object.keys(product.price)[0]);
 
     return (
         <div id='productCard' className='opacity-0 bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300'>
@@ -60,11 +60,18 @@ const ProductCard = ({ product, productView }) => {
                 </div>
                 <div className={` ${productView === 'grid' ? 'w-full text-center' : 'w-[80%] text-left'}`}>
                     <p className='text-yellow-500 text-lg font-extrabold mb-2'>Rs. {product.price[selectedSize]}</p>
-                    {product.size.map((size, index) => (
+                    {/* {product.size.map((size, index) => (
                         <span className={`${selectedSize === size ? 'text-yellow-500' : 'text-white'} cursor-pointer`} key={index} onClick={() => setSelectedSize(size)}>
                             {size} {index < product.size.length - 1 ? ' / ' : ''}
                         </span>
-                    ))}
+                    ))} */}
+                    {
+                        Object.keys(product.price).map((size, index)=>(
+                            <span className={`${selectedSize === size ? 'text-yellow-500' : 'text-white'} cursor-pointer`} key={index} onClick={() => setSelectedSize(size)}>
+                            {size} {index < Object.keys(product.price).length - 1 ? ' / ' : ''}
+                        </span> 
+                        ))
+                    }
                     <h3 className='font-semibold text-white my-1'>{product.label}</h3>
                     <p className='text-white line-clamp-3 text-sm'>{product.description}</p>
                 </div>

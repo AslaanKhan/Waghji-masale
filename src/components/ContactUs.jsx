@@ -11,17 +11,17 @@ const ContactUsPage = () => {
           <h2 className="text-2xl font-semibold mb-2">
             Call Us
           </h2>
-          <p className="text-lg select-text">
+          {/* <p className="text-lg select-text">
             9111136112
-          </p>
-          <p className="text-lg select-text">
-            9589757834
-          </p>
+          </p> */}
+          <a href='tel:9589757834' className="text-lg select-text">
+            +91 958-975-7834
+          </a>
           <h2 className="text-2xl font-semibold mt-4 mb-2">
             Whatsapp Us
           </h2>
           <a href='https://wa.me/9589757834' target='_blank' className="text-lg select-text">
-            9589757834
+          +91 958-975-7834
           </a>
           <h2 className="text-2xl font-semibold mt-4 mb-2">
             Mail Us
@@ -33,12 +33,6 @@ const ContactUsPage = () => {
             waghjiboys@gmail.com
           </a>
           <br />
-          <a
-            href="mailto:waghjimarketing@gmail.com"
-            className="text-lg underline select-text"
-          >
-            waghjimarketing@gmail.com
-          </a>
         </div>
         <div className="space-y-6 select-text">
             <div>

@@ -30,7 +30,7 @@ const Hero = () => {
     <section className='w-full md:nav-height h-[calc(100vh-20px)] bg-black relative'>
       <div className='h-[90%] w-full flex-center flex-col'>
         <div id='hero-title' className='opacity-0 flex flex-col md:w-10/12 w-11/12 items-center justify-center text-center'>
-          <img src="/assets/images/waghji-logo-Copy.png" className='w-32 md:w-40 lg:w-48' alt="Waghji Logo" />
+          <img src="assets/images/Waghji Masale_files/WAGHJI LOGO.png" className='w-32 md:w-40 lg:w-48' alt="Waghji Logo" />
           <div className='mx-auto max-w-[80%] mt-4'>
             <h3 className='text-white font-bold mb-4'>
               <span className='text-2xl md:text-3xl'>OUR SERVICES</span>
@@ -51,7 +51,7 @@ const Hero = () => {
         </div>
       </div>
       <div id='cta' className='flex flex-col items-center opacity-0 -translate-y-80 mt-6'>
-        <a href="#highlights" className='btn bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-yellow-600 transition-colors duration-300'>
+        <a href="#highlights" className='btn hover:bg-red-500 hover:text-white text-white font-bold py-2 px-4 rounded '>
           Our Products
         </a>
       </div>

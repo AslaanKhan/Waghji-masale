@@ -10,6 +10,9 @@ import OtherPage from './components/PorductPages/OtherPage'
 import ContactUsPage from './components/ContactUs'
 import ProductContext, { ProductProvider } from './GlobalProvider/Context'
 import Products from './components/PorductPages/Products'
+//...
+import * as Sentry from "@sentry/react";
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -29,6 +32,8 @@ export const Home  = () => {
     <>
       <Hero />
       <Highlights />
+      <Footer />
+
       {/* <Model /> */}
     </>
   )
@@ -50,16 +55,7 @@ export const SearchAble = () => {
         <Products />
       }
     </>
-    // <>
-    //   {searchQuery === '' ? <>
-    //     <Hero />
-    //     <Highlights />
-    //     <Model />
-    //   </> : <Products />
-    //   }
-    // </>
-
   )
 }
 
-export default App
+export default Sentry.withProfiler(App);
