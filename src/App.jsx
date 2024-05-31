@@ -20,7 +20,13 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/*" element={<SearchAble />} />
+        <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/chicken" element={<ChickenPage />} />
+          <Route path="/mutton" element={<MuttonPage />} />
+          <Route path="/others" element={<OtherPage />} />
+          <Route path="/contact-us" element={<ContactUsPage />} />
+          {/* <Route path="/*" element={<SearchAble />} /> */}
         </Routes>
       </Router>
     </ProductProvider>
