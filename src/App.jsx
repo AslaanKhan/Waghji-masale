@@ -1,17 +1,16 @@
 import React, { useContext } from 'react'
-import Navbar from './components/Navbar'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import ProductContext from './GlobalProvider/Context'
+import ContactUsPage from './components/ContactUs'
 import Hero from './components/Hero'
 import Highlights from './components/Highlights'
-import Model from './components/Model'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
 import ChickenPage from './components/PorductPages/ChickenPage'
 import MuttonPage from './components/PorductPages/MutttonPage'
 import OtherPage from './components/PorductPages/OtherPage'
-import ContactUsPage from './components/ContactUs'
-import ProductContext, { ProductProvider } from './GlobalProvider/Context'
 import Products from './components/PorductPages/Products'
 //...
-import * as Sentry from "@sentry/react";
+import * as Sentry from "@sentry/react"
 import Footer from './components/Footer'
 
 const App = () => {
@@ -22,7 +21,7 @@ const App = () => {
       <Navbar />
       {searchQuery === '' ?
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/chicken" element={<ChickenPage />} />
           <Route path="/mutton" element={<MuttonPage />} />
