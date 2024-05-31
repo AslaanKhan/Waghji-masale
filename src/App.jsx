@@ -15,40 +15,11 @@ import * as Sentry from "@sentry/react";
 import Footer from './components/Footer'
 
 const App = () => {
-  return (
-    <ProductProvider>
-      <Router>
-        <Navbar />
-        <Routes>
-        <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/chicken" element={<ChickenPage />} />
-          <Route path="/mutton" element={<MuttonPage />} />
-          <Route path="/others" element={<OtherPage />} />
-          <Route path="/contact-us" element={<ContactUsPage />} />
-          {/* <Route path="/*" element={<SearchAble />} /> */}
-        </Routes>
-      </Router>
-    </ProductProvider>
-  )
-}
-
-export const Home  = () => {
-  return (
-    <>
-      <Hero />
-      <Highlights />
-      <Footer />
-
-      {/* <Model /> */}
-    </>
-  )
-}
-
-export const SearchAble = () => {
   const { searchQuery } = useContext(ProductContext)
+
   return (
-    <>
+    <Router>
+      <Navbar />
       {searchQuery === '' ?
         <Routes>
           <Route path="/" element={<Home />} />
@@ -57,9 +28,21 @@ export const SearchAble = () => {
           <Route path="/mutton" element={<MuttonPage />} />
           <Route path="/others" element={<OtherPage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
-        </Routes> :
-        <Products />
+        </Routes>
+        : <Products />
       }
+    </Router>
+  )
+}
+
+export const Home = () => {
+  return (
+    <>
+      <Hero />
+      <Highlights />
+      <Footer />
+
+      {/* <Model /> */}
     </>
   )
 }
