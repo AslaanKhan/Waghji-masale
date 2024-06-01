@@ -21,7 +21,7 @@ const Features = () => {
 
         animateWithGsap('#features_title', { opacity: 1, y: 0, }),
             animateWithGsap('.g_grow', { scale: 1, opacity: 1, ease: 'power1' }, { scrub: 5.5 })
-        animateWithGsap('.g_text', { y: 0, opacity: 1, ease: 'power2inOut', duration: 1 })
+        animateWithGsap('.g_text', { y: 0, opacity: 1, ease: 'power2inOut' })
     }, [])
 
     return (
@@ -33,7 +33,7 @@ const Features = () => {
                     </h1>
                 </div>
                 <div className='flex flex-col justify-center items-center overflow-hidden'>
-                    <div id='features_title' className='translate-y-20 opacity-0 mt-20 mb-24 pl-24'>
+                    <div id='features_title' className='translate-y-20 opacity-0 mt-10 mb-24 pl-24'>
                         <h2 className='text-5xl lg:text-7xl font-semibold'>
                             Waghji Masale!
                         </h2>
@@ -53,7 +53,7 @@ const Features = () => {
                             <div className='feature-video-container'>
                                 <div className='overflow-hidden flex-1 h-[50vh]'>
                                     <img src={explore1Img} alt="expolore-img" className='feature-video g_grow' />
-                                </div>
+                                </div>                                
                                 <div className='overflow-hidden flex-1 h-[50vh]'>
                                     <img src={explore2Img} alt="expolore-img2" className='feature-video g_grow' />
                                 </div>
