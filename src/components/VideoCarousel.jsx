@@ -109,7 +109,11 @@ const VideoCarousel = () => {
         // ticker to update the progress bar
         gsap.ticker.add(animUpdate);
       } else {
-        // remove the ticker when the video is paused (progress bar is stopped)
+        // remove the ticker when the video is paused (progress bar is stopped)        
+        gsap.ticker.remove(animUpdate);
+      }
+      return()=>{
+        anim.kill();
         gsap.ticker.remove(animUpdate);
       }
     }

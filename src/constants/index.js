@@ -20,9 +20,9 @@ import {
     {
       id: 1,
       textLists: [
-        "Enter A17 Pro.",
-        "Game‑changing chip.",
-        "Groundbreaking performance.",
+        "Discover Waghji Masale.",
+        "Flavor-packed spices.",
+        "Unleashing taste and aroma.",
       ],
       video: highlightFirstVideo,
       videoDuration: 4,

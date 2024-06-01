@@ -12,6 +12,7 @@ import Products from './components/PorductPages/Products'
 //...
 import * as Sentry from "@sentry/react"
 import Footer from './components/Footer'
+import Features from './components/Features'
 
 const App = () => {
   const { searchQuery } = useContext(ProductContext)
@@ -39,8 +40,8 @@ export const Home = () => {
     <>
       <Hero />
       <Highlights />
+      <Features />
       <Footer />
-
       {/* <Model /> */}
     </>
   )

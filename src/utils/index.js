@@ -8,7 +8,7 @@ import highlightFirstmv from "/assets/videos/highlight-first.mp4";
 import highlightSectmv from "/assets/videos/hightlight-third.mp4";
 import highlightThirdmv from "/assets/videos/hightlight-sec.mp4";
 import highlightFourthmv from "/assets/videos/hightlight-fourth.mp4";
-import exploremv from "/assets/videos/explore.mp4";
+import exploremv from "/assets/videos/LogoGif.gif";
 import framemv from "/assets/videos/frame.mp4";
 
 import logo from "/assets/images/Waghji Masale_files/WAGHJI LOGO.png";
@@ -24,8 +24,8 @@ import yellow from "/assets/images/yellow.jpg";
 import blue from "/assets/images/blue.jpg";
 import white from "/assets/images/white.jpg";
 import black from "/assets/images/black.jpg";
-import explore1 from "/assets/images/explore1.jpg";
-import explore2 from "/assets/images/explore2.jpg";
+import explore1 from "/assets/images/Waghji Masale_files/chicken/ButterChicken.png";
+import explore2 from "/assets/images/Waghji Masale_files/mutton/NahariPayaMix.png";
 import chip from "/assets/images/chip.jpeg";
 import frame from "/assets/images/frame.png";
 
