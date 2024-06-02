@@ -16,7 +16,7 @@ const Products = () => {
     }, [products])
 
     return (
-        <section id='products' className='nav-height bg-black relative w-[90%] h-full mx-auto my-auto'>
+        <section id='products' className='bg-black relative w-[90%] h-full mx-auto my-auto'>
             <h1 className="md:text-3xl text-2xl font-bold text-center text-white my-8"> Search Our Delicious Spice Mixes</h1>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6'>
                 {products.length > 0 ? products.map((product, i) => <ProductCard key={i} product={product} />) : 'No products found'}

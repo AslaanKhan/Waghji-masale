@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import React from 'react'
 const Hero = () => {
-  
+
   useGSAP(
     () => {
       gsap.to('#hero-title',{ opacity: 1, delay: 0.5 })
@@ -35,7 +35,7 @@ const Hero = () => {
       </div>
       <div id='cta' className='flex flex-col items-center opacity-0 -translate-y-80 mt-6'>
         <a href="#highlights" className='btn hover:bg-red-500 hover:text-white text-white font-bold py-2 px-4 rounded '>
-          About us
+          Our Products
         </a>
       </div>
     </section>

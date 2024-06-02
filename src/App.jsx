@@ -31,7 +31,9 @@ const App = () => {
         </Routes>
         : <Products />
       }
+      <Footer />
     </Router>
+    
   )
 }
 
@@ -41,7 +43,6 @@ export const Home = () => {
       <Hero />
       <Highlights />
       <Features />
-      <Footer />
       {/* <Model /> */}
     </>
   )

@@ -3,6 +3,7 @@ import {
     highlightFirstVideo,
     highlightSecondVideo,
     highlightThirdVideo,
+    highlightFourthVideo
   } from "../utils";
 
   const imgFolderChicken = 'assets/images/Waghji Masale_files/chicken' 
@@ -20,7 +21,7 @@ import {
         "Unleash the aroma.",
       ],
       video: highlightFirstVideo,
-      videoDuration: 11,
+      videoDuration: 5,
     },
     {
       id: 2,
@@ -29,7 +30,7 @@ import {
         "Taste. Quality. Consistency.",
       ],
       video: highlightSecondVideo,
-      videoDuration: 7,
+      videoDuration: 5,
     },
     {
       id: 3,
@@ -41,8 +42,18 @@ import {
       video: highlightThirdVideo,
       videoDuration: 5,
     },  
+    {
+      id: 4,
+      textLists: [
+        "Waghji Masale brings you",
+        "rich, authentic blends.",
+        "Taste the tradition.",
+      ],
+      video: highlightFourthVideo,
+      videoDuration: 11,
+    },  
   ];
-  
+
   export const footerLinks = [
     "chicken",
     "mutton",

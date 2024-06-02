@@ -30,7 +30,7 @@ const MuttonPage = () => {
     }, [])
 
     return (
-        <section id='products' className='opacity-0 nav-height bg-black relative mt-4 w-[90%] mx-auto'>
+        <section id='products' className='opacity-0 bg-black relative mt-4 w-[90%] mx-auto'>
             <div className='flex justify-center items-center'>
             <h1 className="md:text-3xl text-2xl font-bold text-center text-white my-8">Exquisite Mutton Spice Blends: A Culinary Journey of Flavor</h1>
                 <div className='items-center ml-auto cursor-pointer hidden md:flex ' onClick={() => setProductView(productView === 'grid' ? 'list' : 'grid')}>
