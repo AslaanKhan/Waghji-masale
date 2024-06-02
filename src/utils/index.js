@@ -15,7 +15,6 @@ import watch from "/assets/images/watch.svg";
 import explore1 from "/assets/images/Waghji Masale_files/chicken/ButterChicken.png";
 import explore2 from "/assets/images/Waghji Masale_files/mutton/NahariPayaMix.png";
 
-export const smallHeroVideo = smallmv;
 export const highlightFirstVideo = highlightFirstmv;
 export const highlightSecondVideo = highlightSectmv;
 export const highlightThirdVideo = highlightThirdmv;
