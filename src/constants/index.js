@@ -358,4 +358,4 @@ import {
 
   ]
 
-  export const combinedProductList = [...chickenProductList, ...muttonProductList];
+  export const combinedProductList = [...chickenProductList, ...muttonProductList, ...otherProductsList];
