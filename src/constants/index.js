@@ -21,28 +21,31 @@ import {
       id: 1,
       textLists: [
         "Discover Waghji Masale.",
-        "Flavor-packed spices.",
-        "Unleashing taste and aroma.",
+        "Packed with flavor.",
+        "Unleash the aroma.",
       ],
       video: highlightFirstVideo,
       videoDuration: 11,
     },
     {
       id: 2,
-      textLists: ["Almost ready to eat.", "Taste. Quality. Consistency."],
+      textLists: [
+        "Ready to eat.",
+        "Taste. Quality. Consistency.",
+      ],
       video: highlightSecondVideo,
       videoDuration: 7,
     },
     {
       id: 3,
       textLists: [
-        "Waghji Masale brings you the",
-        "richest and most authentic",
-        "spice blends. Taste the tradition.",
+        "Waghji Masale brings you",
+        "rich, authentic blends.",
+        "Taste the tradition.",
       ],
       video: highlightThirdVideo,
       videoDuration: 5,
-    },    
+    },  
   ];
   
   export const models = [

@@ -4,7 +4,9 @@ import App from './App.jsx'
 import './index.css'
 import * as Sentry from "@sentry/react";
 import { ProductProvider } from './GlobalProvider/Context.jsx';
-
+import { injectSpeedInsights } from '@vercel/speed-insights';
+ 
+injectSpeedInsights();
 
 Sentry.init({
   dsn: "https://713a3f5341836c317e5767fd55d5e018@o4507339166515200.ingest.de.sentry.io/4507339170644048",
