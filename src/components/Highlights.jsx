@@ -14,7 +14,7 @@ const Highlights = () => {
     <section id='highlights' className='w-screen overflow-hidden h-full common-padding bg-zinc'>
       <div className='screen-max-width'>
         <div className='mb-12 w-full md:flex items-end justify-between'>
-            <h1 id='highlights-title' className='section-heading'>Product Categories.</h1>
+            <h1 id='highlights-title' className='section-heading'>Discover Waghji Masale.</h1>
             <div className='flex flex-wrap items-end gap-5'>
               <Link to={'/chicken'} className='link'>
                 Chicken Spice mix

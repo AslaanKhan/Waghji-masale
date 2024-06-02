@@ -120,7 +120,7 @@ const VideoCarousel = () => {
   }, [videoId, startPlay]);
 
   useEffect(() => {
-    if (loadedData.length > 3) {
+    if (loadedData.length > 2) {
       if (!isPlaying) {
         videoRef.current[videoId].pause();
       } else {
@@ -169,14 +169,12 @@ const VideoCarousel = () => {
                 <video
                   id="video"
                   playsInline={true}
-                  className={`${
-                    list.id === 2 && "translate-x-44"
-                  } pointer-events-none`}
+                  className={`pointer-events-none`}
                   preload="auto"
                   muted
                   ref={(el) => (videoRef.current[i] = el)}
                   onEnded={() =>
-                    i !== 3
+                    i !== 2
                       ? handleProcess("video-end", i)
                       : handleProcess("video-last")
                   }

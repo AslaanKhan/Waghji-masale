@@ -52,7 +52,7 @@ const Hero = () => {
       </div>
       <div id='cta' className='flex flex-col items-center opacity-0 -translate-y-80 mt-6'>
         <a href="#highlights" className='btn hover:bg-red-500 hover:text-white text-white font-bold py-2 px-4 rounded '>
-          Our Products
+          About us
         </a>
       </div>
     </section>

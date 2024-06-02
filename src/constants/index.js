@@ -25,30 +25,24 @@ import {
         "Unleashing taste and aroma.",
       ],
       video: highlightFirstVideo,
-      videoDuration: 4,
+      videoDuration: 11,
     },
     {
       id: 2,
-      textLists: ["Titanium.", "So strong. So light. So Pro."],
+      textLists: ["Almost ready to eat.", "Taste. Quality. Consistency."],
       video: highlightSecondVideo,
-      videoDuration: 5,
+      videoDuration: 7,
     },
     {
       id: 3,
       textLists: [
-        "iPhone 15 Pro Max has the",
-        "longest optical zoom in",
-        "iPhone ever. Far out.",
+        "Waghji Masale brings you the",
+        "richest and most authentic",
+        "spice blends. Taste the tradition.",
       ],
       video: highlightThirdVideo,
-      videoDuration: 2,
-    },
-    {
-      id: 4,
-      textLists: ["All-new Action button.", "What will yours do?."],
-      video: highlightFourthVideo,
-      videoDuration: 3.63,
-    },
+      videoDuration: 5,
+    },    
   ];
   
   export const models = [
