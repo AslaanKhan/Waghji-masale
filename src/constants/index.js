@@ -30,7 +30,7 @@ import {
         "Taste. Quality. Consistency.",
       ],
       video: highlightSecondVideo,
-      videoDuration: 5,
+      videoDuration: 47,
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ import {
         "Taste the tradition.",
       ],
       video: highlightThirdVideo,
-      videoDuration: 5,
+      videoDuration: 40,
     },  
     {
       id: 4,
@@ -50,7 +50,7 @@ import {
         "Taste the tradition.",
       ],
       video: highlightFourthVideo,
-      videoDuration: 11,
+      videoDuration: 48,
     },  
   ];
 
