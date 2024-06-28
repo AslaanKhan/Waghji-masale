@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const ContactUsPage = () => {
   return (
@@ -17,8 +18,8 @@ const ContactUsPage = () => {
           <a href='tel:9589757834' className="text-lg select-text">
             +91 958-975-7834
           </a>
-          <h2 className="text-2xl font-semibold mt-4 mb-2">
-            Whatsapp Us
+          <h2 className="text-2xl font-semibold mt-4 mb-2 flex items-center gap-2">
+            Whatsapp Us <FaWhatsapp color='#075E54' className='bg-green-500 rounded' size={16} />
           </h2>
           <a href='https://wa.me/9589757834' target='_blank' className="text-lg select-text">
           +91 958-975-7834

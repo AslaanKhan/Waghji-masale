@@ -40,23 +40,23 @@ const Footer = () => {
               </a>
             ))} */}
             <a href='https://wa.me/9589757834' target='_blank' className='font-semibold cursor-pointer text-gray text-xs flex'> 
-            <FaWhatsapp size={16} />
+            <FaWhatsapp color='#075E54' className='bg-green-500' size={16} />
             <span className="mx-2"> | </span>
             </a>
             <a href="https://www.instagram.com/hameed.khatri/?igsh=MW0weGEzdnR4cHUzcA%3D%3D" target='_blank' className='font-semibold cursor-pointer text-gray text-xs flex'> 
-            <FaInstagram size={16} />
+            <FaInstagram size={16}  color='white' className='bg-gradient-to-br from-yellow-400 via-red-500 to-purple-600' />
             <span className="mx-2"> | </span>
             </a>
             <a href="https://www.youtube.com/@waghjiboys2/featured" target='_blank' className='font-semibold cursor-pointer text-gray text-xs flex'> 
-            <FaYoutube size={16} />
+            <FaYoutube color='white' className='bg-[#FF0000]' size={16} />
             <span className="mx-2"> | </span>
             </a>
             <a href="mailto:waghjiboys@gmail.com" target='_blank' className='font-semibold cursor-pointer text-gray text-xs flex'> 
-            <BiLogoGmail size={16} />
+            <BiLogoGmail color='red' size={16} />
             <span className="mx-2"> | </span>
             </a>
             <a href="https://www.facebook.com/waghjimasalIndia/" target='_blank' className='font-semibold cursor-pointer text-gray text-xs flex'> 
-            <FaFacebookSquare size={16} />
+            <FaFacebookSquare color='#1877F2' className='bg-[white]' size={16} />
             </a>
           </div>
         </div>
